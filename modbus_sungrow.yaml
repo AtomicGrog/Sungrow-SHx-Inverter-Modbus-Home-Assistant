@@ -3227,3 +3227,19 @@ script:
         data:
           entity_id: input_select.set_sg_battery_forced_charge_discharge_cmd
           option: "Stop (default)"
+
+  sg_set_export_limit_off:
+    sequence:
+      - action: input_select.select_option
+        data:
+          option: Disabled
+        target:
+          entity_id: input_select.set_sg_export_power_limit_mode
+
+  sg_set_export_limit_on:
+    sequence:
+      - action: input_select.select_option
+        data:
+          option: Enabled
+        target:
+          entity_id: input_select.set_sg_export_power_limit_mode
